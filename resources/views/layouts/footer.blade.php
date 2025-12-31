@@ -8,9 +8,9 @@
                 <!-- Company Info -->
                 <div>
                     <div class="text-2xl font-display font-bold mb-4">
-                        <span class="text-gradient">TECH</span><span class="text-white">TOWER</span>
+                        <x-logo />
                     </div>
-                    <p class="text-gray-400 mb-6">Innovative software solutions for modern businesses. Transform your digital presence with cutting-edge technology.</p>
+                    <p class="text-gray-400 mb-6">Crafting innovative software solutions for modern businesses. Transform your digital presence with cutting-edge technology.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-white/20 transition">
                             <i class="fab fa-facebook-f"></i>
@@ -55,18 +55,29 @@
                 <div>
                     <h3 class="font-display font-bold text-lg mb-4">CONTACT</h3>
                     <ul class="space-y-4">
+                          <li class="flex items-center space-x-3">
+                            <x-lucide-mail class="w-5 h-5 text-[--primary]"/>
+
+                            <span class="text-gray-400">info@techtowerinc.com</span>
+                        </li>
+
+                       <li class="flex items-start space-x-3">
+    <x-lucide-phone-call class="w-5 h-5 text-[--primary] mt-1" />
+
+    <div class="flex flex-col text-gray-400">
+        <span>+256 703 283 529</span>
+        <span>+256 774 272 820</span>
+    </div>
+</li>
+
+
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-map-marker-alt text-[--primary] mt-1"></i>
-                            <span class="text-gray-400">123 Tech Street<br>Innovation City, TC 10001</span>
+                            <x-lucide-map-pin-house class="w-5 h-5 text-[--primary] mt-1"/>
+
+                            <span class="text-gray-400">P.O Box 118290<br>Wakiso, Kampala Uganda</span>
                         </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-[--primary]"></i>
-                            <span class="text-gray-400">+1 (555) 123-4567</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-[--primary]"></i>
-                            <span class="text-gray-400">hello@techtower.com</span>
-                        </li>
+                        
+                      
                     </ul>
                 </div>
             </div>

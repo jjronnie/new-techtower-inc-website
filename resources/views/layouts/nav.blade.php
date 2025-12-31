@@ -4,7 +4,7 @@
            <div class="flex items-center justify-between h-20">
                <!-- Logo -->
                <a href="/" class="flex items-center space-x-2">
-                   
+
                    <x-logo />
                </a>
 
@@ -19,52 +19,50 @@
                </div>
 
                <!-- Desktop Actions -->
-               <div class="hidden lg:flex items-center space-x-4">
-                   <button @click="toggleSearch" class="text-gray-400 hover:text-white transition">
-                       <x-lucide-search class="w-6 h-6" />
+               <div class="hidden lg:flex items-center space-x-5">
+                   <button @click="toggleSearch" class="text-white glass-hover rounded-full p-3 transition">
+                       <x-lucide-search class="w-5 h-5" />
 
                    </button>
-                   <a href="/wishlist.html" class="relative text-gray-400 hover:text-white transition">
-                       <x-lucide-heart class="w-6 h-6" />
+                   <a href="/wishlist.html" class="relative text-white glass-hover rounded-full p-3  transition">
+                       <x-lucide-heart class="w-5 h-5" />
                        <span x-show="wishlistCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
                            x-text="wishlistCount"></span>
                    </a>
-                   <a href="/cart.html" class="relative text-gray-400 hover:text-white transition">
+                   <a href="/cart.html" class="relative text-white glass-hover rounded-full p-3  transition">
 
-                       <x-lucide-shopping-cart class="w-6 h-6" />
+                       <x-lucide-shopping-cart class="w-5 h-5" />
 
                        <span x-show="cartCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
                            x-text="cartCount"></span>
                    </a>
-                   <a href="/login.html" class="text-gray-400 hover:text-white transition">
-                       <x-lucide-user-round class="w-6 h-6" />
+                   <a href="/login.html" class="text-white glass-hover rounded-full p-3 transition">
+                       <x-lucide-user-round class="w-5 h-5" />
 
                    </a>
                </div>
 
                <!-- Mobile Actions -->
                <div class="flex lg:hidden items-center space-x-3">
-                   <button @click="toggleSearch" class="text-gray-400 hover:text-white transition">
-                       <x-lucide-search class="w-6 h-6" />
+                   <button @click="toggleSearch" class="text-white glass-hover rounded-full p-3  transition">
+                       <x-lucide-search class="w-4 h-4" />
 
                    </button>
-                   <a href="/cart.html" class="relative text-gray-400 hover:text-white transition">
-                       <x-lucide-shopping-cart class="w-6 h-6" />
+                   <a href="/cart.html" class="relative text-white glass-hover rounded-full p-3  transition">
+                       <x-lucide-shopping-cart class="w-4 h-4" />
                        <span x-show="cartCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
                            x-text="cartCount"></span>
                    </a>
 
 
                    <button @click="mobileMenuOpen = !mobileMenuOpen"
-                       class="p-2 rounded-md transition-colors duration-200
-           bg-transparent hover:bg-[--primary]
-            hover:text-black">
-                       <x-lucide-x x-cloak x-show="mobileMenuOpen" class="w-6 h-6" />
+                       class="transition-colors duration-200   text-white glass-hover rounded-full p-3         bg-transparent hover:bg-[--primary]            hover:text-black">
+                       <x-lucide-x x-cloak x-show="mobileMenuOpen" class="w-4 h-4" />
 
-                       <x-lucide-menu x-cloak x-show="!mobileMenuOpen" class="w-6 h-6" />
+                       <x-lucide-menu x-cloak x-show="!mobileMenuOpen" class="w-4 h-4" />
                    </button>
 
                </div>
@@ -78,7 +76,7 @@
                    <input type="text" placeholder="Search..."
                        class="w-full px-6 py-4 input-glass rounded-xl text-lg">
                    <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
-                       <x-lucide-search class="w-6 h-6" />
+                       <x-lucide-search class="w-4 h-4" />
                    </button>
                </div>
            </div>
@@ -95,7 +93,7 @@
                    <span class="text-gradient">TECH</span><span class="text-white">TOWER</span>
                </span>
                <button @click="mobileMenuOpen = false" class="text-white">
-                   <x-lucide-x class="w-6 h-6" />
+                   <x-lucide-x class="w-4 h-4" />
                </button>
            </div>
 
@@ -114,12 +112,12 @@
 
            <div class="grid grid-cols-2 gap-4 mb-8">
                <a href="/wishlist.html" class="glass-hover p-4 rounded-xl text-center">
-                   <x-lucide-heart class="text-[--primary] w-6 h-6 mb-2" />
+                   <x-lucide-heart class="text-[--primary] w-4 h-4 mb-2" />
 
                    <div class="text-sm font-display">Wishlist</div>
                </a>
                <a href="/login.html" class="glass-hover p-4 rounded-xl text-center">
-                   <x-lucide-user-round class="text-[--primary] w-6 h-6 mb-2" />
+                   <x-lucide-user-round class="text-[--primary] w-4 h-4 mb-2" />
                    <div class="text-sm font-display">Account</div>
                </a>
            </div>
@@ -128,19 +126,19 @@
                <div class="text-sm font-display text-gray-400 mb-3">SERVICES</div>
                <div class="grid grid-cols-2 gap-3">
                    <a href="#" class="glass-hover p-3 rounded-lg flex items-center space-x-2">
-                       <x-lucide-laptop-minimal-check class="text-[--primary] w-6 h-6" />
+                       <x-lucide-laptop-minimal-check class="text-[--primary] w-4 h-4" />
                        <span class="text-sm">Web Dev</span>
                    </a>
                    <a href="#" class="glass-hover p-3 rounded-lg flex items-center space-x-2">
-                       <x-lucide-smartphone class="text-[--primary] w-6 h-6" />
+                       <x-lucide-smartphone class="text-[--primary] w-4 h-4" />
                        <span class="text-sm">Mobile Apps</span>
                    </a>
                    <a href="#" class="glass-hover p-3 rounded-lg flex items-center space-x-2">
-                       <x-lucide-code class="text-[--primary] w-6 h-6" />
+                       <x-lucide-code class="text-[--primary] w-4 h-4" />
                        <span class="text-sm">Software</span>
                    </a>
                    <a href="#" class="glass-hover p-3 rounded-lg flex items-center space-x-2">
-                       <x-lucide-cloud class="text-[--primary] w-6 h-6" />
+                       <x-lucide-cloud class="text-[--primary] w-4 h-4" />
                        <span class="text-sm">Cloud</span>
                    </a>
                </div>

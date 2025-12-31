@@ -8,8 +8,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
+    <link rel="icon" href="{{ asset('assets/logos/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/logos/favicon.png') }}">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
