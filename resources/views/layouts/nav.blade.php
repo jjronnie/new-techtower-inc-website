@@ -10,35 +10,35 @@
 
                <!-- Desktop Navigation -->
                <div class="hidden lg:flex items-center space-x-8">
-                   <a href="{{ route('home') }}" class="nav-link active font-medium">HOME</a>
-                   <a href="#services" class="nav-link font-medium">SERVICES</a>
-                   <a href="#portfolio" class="nav-link font-medium">PORTFOLIO</a>
-                   <a href="#shop" class="nav-link font-medium">SHOP</a>
+                   <a href="{{ route('home') }}" class="nav-link  font-medium">HOME</a>
+                   <a href="{{ route('services') }}" class="nav-link font-medium">SERVICES</a>
+                   <a href="{{ route('portfolio') }}" class="nav-link font-medium">PORTFOLIO</a>
+                   <a href="{{ route('shop') }}" class="nav-link font-medium">SHOP</a>
                    <a href="{{ route('about') }}" class="nav-link font-medium">ABOUT</a>
-                   <a href="#contact" class="nav-link font-medium">CONTACT</a>
+                   <a href="{{ route('contact') }}" class="nav-link font-medium">CONTACT</a>
                </div>
 
                <!-- Desktop Actions -->
                <div class="hidden lg:flex items-center space-x-5">
-                   <button @click="toggleSearch" class="text-white glass-hover rounded-full p-3 transition">
+                   <button @click="toggleSearch" class="text-white glass-hover rounded-xl p-3 transition">
                        <x-lucide-search class="w-5 h-5" />
 
                    </button>
-                   <a href="/wishlist.html" class="relative text-white glass-hover rounded-full p-3  transition">
+                   <a href="/wishlist.html" class="relative text-white glass-hover rounded-xl p-3  transition">
                        <x-lucide-heart class="w-5 h-5" />
                        <span x-show="wishlistCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-xl w-4 h-4 flex items-center justify-center"
                            x-text="wishlistCount"></span>
                    </a>
-                   <a href="/cart.html" class="relative text-white glass-hover rounded-full p-3  transition">
+                   <a href="/cart.html" class="relative text-white glass-hover rounded-xl p-3  transition">
 
                        <x-lucide-shopping-cart class="w-5 h-5" />
 
                        <span x-show="cartCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-xl w-4 h-4 flex items-center justify-center"
                            x-text="cartCount"></span>
                    </a>
-                   <a href="/login.html" class="text-white glass-hover rounded-full p-3 transition">
+                   <a href="{{ route('login') }}" class="text-white glass-hover rounded-xl p-3 transition">
                        <x-lucide-user-round class="w-5 h-5" />
 
                    </a>
@@ -46,20 +46,20 @@
 
                <!-- Mobile Actions -->
                <div class="flex lg:hidden items-center space-x-3">
-                   <button @click="toggleSearch" class="text-white glass-hover rounded-full p-3  transition">
+                   <button @click="toggleSearch" class="text-white glass-hover rounded-xl p-3  transition">
                        <x-lucide-search class="w-4 h-4" />
 
                    </button>
-                   <a href="/cart.html" class="relative text-white glass-hover rounded-full p-3  transition">
+                   <a href="/cart.html" class="relative text-white glass-hover rounded-xl p-3  transition">
                        <x-lucide-shopping-cart class="w-4 h-4" />
                        <span x-show="cartCount > 0"
-                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
+                           class="absolute -top-2 -right-2 bg-[--primary] text-black text-xs font-bold rounded-xl w-4 h-4 flex items-center justify-center"
                            x-text="cartCount"></span>
                    </a>
 
 
                    <button @click="mobileMenuOpen = !mobileMenuOpen"
-                       class="transition-colors duration-200   text-white glass-hover rounded-full p-3         bg-transparent hover:bg-[--primary]            hover:text-black">
+                       class="transition-colors duration-200   text-white glass-hover  p-3 bg-transparent hover:bg-[--primary]  hover:text-black w-10 h-10 rounded-xl glass">
                        <x-lucide-x x-cloak x-show="mobileMenuOpen" class="w-4 h-4" />
 
                        <x-lucide-menu x-cloak x-show="!mobileMenuOpen" class="w-4 h-4" />
@@ -116,7 +116,7 @@
 
                    <div class="text-sm font-display">Wishlist</div>
                </a>
-               <a href="/login.html" class="glass-hover p-4 rounded-xl text-center">
+               <a href="{{route('login')}}" class="glass-hover p-4 rounded-xl text-center">
                    <x-lucide-user-round class="text-[--primary] w-4 h-4 mb-2" />
                    <div class="text-sm font-display">Account</div>
                </a>

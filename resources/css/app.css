@@ -1,5 +1,6 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "./custom.css";
+@import "./dashboard.css";
 
 @tailwind base;
 @tailwind components;

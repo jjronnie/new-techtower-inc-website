@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\UserOtp;
 use Illuminate\Http\Request;
+use App\Helpers\OtpHelper;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
-class OtpController extends Controller
+class UserOtpController extends Controller
 {
     public function verify(Request $request)
     {
@@ -47,7 +48,28 @@ class OtpController extends Controller
     {
         $user->update([
             'last_login_at' => now(),
-            'last_login_ip' => $request->ip(),
         ]);
     }
+
+
+    public function toggle2FA(Request $request)
+    {
+        $user = Auth::user();
+
+        $request->validate([
+            'mfa_enabled' => 'required|boolean',
+        ]);
+
+        $user->mfa_enabled = $request->mfa_enabled;
+        $user->save();
+
+        // Send OTP immediately if enabling 2FA
+        if ($user->mfa_enabled) {
+            // send_login_otp($user);
+            return back()->with('success', '2FA enabled. OTP sent to your email.');
+        }
+
+        return back()->with('success', '2FA disabled.');
+    }
+
 }

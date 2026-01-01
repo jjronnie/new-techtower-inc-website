@@ -96,69 +96,7 @@
     </div>
 </section>
 
-<!-- ============================================ -->
-<!-- LOGIN SECTION -->
-<!-- ============================================ -->
-<section class="min-h-screen flex items-center justify-center py-20 px-4 hero-bg hero-grid-bg">
-    <div class="w-full max-w-md">
-        <div class="text-center mb-8">
-            <h1 class="text-3xl font-display font-bold mb-2">
-                <span class="text-gradient">TECH</span><span class="text-white">TOWER</span>
-            </h1>
-        </div>
-        
-        <div class="glass rounded-3xl p-8 sm:p-10">
-            <h2 class="text-2xl font-display font-bold text-center mb-2">Welcome Back</h2>
-            <p class="text-gray-400 text-center mb-8">Sign in to access your collection</p>
-            
-            <form class="space-y-6" @submit.prevent="login()">
-                <div>
-                    <input type="email" placeholder="Email Address" required class="w-full px-6 py-4 input-glass rounded-xl">
-                </div>
-                <div class="relative">
-                    <input x-data="{ show: false }" :type="show ? 'text' : 'password'" placeholder="Password" required class="w-full px-6 py-4 input-glass rounded-xl pr-12">
-                    <button type="button" @click="show = !show" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
-                        <i :class="show ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
-                    </button>
-                </div>
-                <div class="text-right">
-                    <a href="/forgot-password.html" class="text-sm text-[--primary] hover:underline">Forgot password?</a>
-                </div>
-                <button type="submit" class="w-full btn-primary py-4 rounded-xl font-display font-bold tracking-wider">
-                    SIGN IN
-                </button>
-            </form>
-            
-            <div class="my-8 flex items-center">
-                <div class="flex-1 border-t border-white/10"></div>
-                <span class="px-4 text-sm text-gray-400">OR CONTINUE WITH</span>
-                <div class="flex-1 border-t border-white/10"></div>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4">
-                <button class="btn-glass py-3 rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fab fa-google"></i>
-                    <span>GOOGLE</span>
-                </button>
-                <button class="btn-glass py-3 rounded-xl flex items-center justify-center space-x-2">
-                    <i class="fab fa-github"></i>
-                    <span>GITHUB</span>
-                </button>
-            </div>
-            
-            <p class="text-center text-sm text-gray-400 mt-8">
-                Don't have an account? <a href="/signup.html" class="text-[--primary] hover:underline">Sign up</a>
-            </p>
-        </div>
-        
-        <div class="text-center mt-8">
-            <a href="/" class="text-gray-400 hover:text-white transition flex items-center justify-center space-x-2">
-                <i class="fas fa-arrow-left"></i>
-                <span>Back to home</span>
-            </a>
-        </div>
-    </div>
-</section>
+
 
 <!-- ============================================ -->
 <!-- SERVICE DETAILS SECTION -->

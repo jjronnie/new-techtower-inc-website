@@ -30,12 +30,9 @@
 
     @yield('content')
 
-    <!-- Notification -->
-    <div id="notification" class="notification glass">
-        <i class="fas fa-check-circle text-green-400"></i>
-        <span id="notificationText"></span>
-    </div>
+   
 
+<x-notification />
 
 
 
