@@ -1,100 +1,360 @@
 <x-guest-layout>
-    <!-- ============================================ -->
-<!-- PAGE TITLE SECTION -->
+  <!-- ============================================ -->
+<!-- ABOUT PAGE TITLE SECTION -->
 <!-- ============================================ -->
 <section class="relative pt-32 pb-16 px-4 hero-bg hero-grid-bg">
     <div class="max-w-7xl mx-auto text-center">
         <nav class="flex items-center justify-center space-x-2 text-sm mb-6">
             <a href="/" class="text-gray-400 hover:text-white transition">Home</a>
             <i class="fas fa-chevron-right text-gray-600 text-xs"></i>
-            <span class="text-[--primary]">Contact</span>
+            <span class="text-[--primary]">About Us</span>
         </nav>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">
-            Get in <span class="text-gradient">Touch</span>
+            About <span class="text-gradient">TechTower</span>
         </h1>
         <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-            Have questions about our software solutions? We're here to help you build the perfect digital solution.
+            Pioneering digital transformation across Africa with innovative software solutions
         </p>
     </div>
 </section>
 
 <!-- ============================================ -->
-<!-- CONTACT US SECTION -->
+<!-- ABOUT HERO SECTION -->
 <!-- ============================================ -->
 <section class="py-20 px-4">
     <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-8">
-            <!-- Contact Form -->
-            <div class="glass rounded-3xl p-8 sm:p-12">
-                <h2 class="text-3xl font-display font-bold mb-8">Send us a Message</h2>
-                <form class="space-y-6" @submit.prevent="submitContact()">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-display mb-2 text-gray-300">NAME</label>
-                            <input type="text" placeholder="John Doe" required class="w-full px-6 py-4 input-glass rounded-xl">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-display mb-2 text-gray-300">EMAIL</label>
-                            <input type="email" placeholder="john@example.com" required class="w-full px-6 py-4 input-glass rounded-xl">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-display mb-2 text-gray-300">SUBJECT</label>
-                        <input type="text" placeholder="How can we help?" required class="w-full px-6 py-4 input-glass rounded-xl">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-display mb-2 text-gray-300">MESSAGE</label>
-                        <textarea rows="6" placeholder="Tell us more about your inquiry..." required class="w-full px-6 py-4 input-glass rounded-xl resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="w-full btn-primary py-4 rounded-xl flex items-center justify-center space-x-2">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>SEND MESSAGE</span>
-                    </button>
-                </form>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="animate-slide-up">
+                <span class="glass px-4 py-2 rounded-full text-sm font-display tracking-wider inline-block mb-6">EST. 2020 • KAMPALA, UGANDA</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold mb-6 leading-tight">
+                    Pioneering <span class="text-gradient">Digital Solutions</span> in Africa
+                </h2>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    TechTower Innovations is a Kampala-based software development company dedicated to crafting exceptional digital experiences that drive progress and empower businesses across the continent and beyond.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    We believe in the power of collaboration, working closely with our clients to understand their unique needs and co-create solutions that deliver tangible results. Our Ugandan roots provide us with a unique perspective, allowing us to build technology that is both globally competitive and locally relevant.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="btn-primary px-8 py-4 rounded-xl text-center flex items-center justify-center space-x-2">
+                        <span>PARTNER WITH US</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#values" class="btn-glass px-8 py-4 rounded-xl text-center">OUR VALUES</a>
+                </div>
             </div>
             
-            <!-- Contact Info Cards -->
-            <div class="space-y-6">
-                <div class="glass-hover rounded-3xl p-8">
-                    <div class="w-14 h-14 rounded-2xl bg-[--primary]/10 flex items-center justify-center mb-4">
-                        <i class="fas fa-map-marker-alt text-[--primary] text-2xl"></i>
+            <!-- Right Image -->
+            <div class="relative">
+                <div class="glass rounded-3xl overflow-hidden shadow-2xl glow-primary">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Team collaboration" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[--primary]/20 flex items-center justify-center backdrop-blur-sm">
+                                <i class="fas fa-users text-[--primary] text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-display font-bold">50+</div>
+                                <div class="text-sm text-gray-300">Team Members</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-display font-bold mb-2">Visit Us</h3>
-                    <p class="text-gray-400">123 Collector's Lane<br>New York, NY 10001</p>
                 </div>
                 
-                <div class="glass-hover rounded-3xl p-8">
-                    <div class="w-14 h-14 rounded-2xl bg-[--primary]/10 flex items-center justify-center mb-4">
-                        <i class="fas fa-phone text-[--primary] text-2xl"></i>
+                <!-- Floating Stats -->
+                <div class="absolute -right-4 -top-4 glass px-6 py-4 rounded-2xl animate-float">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-award text-[--primary] text-3xl"></i>
+                        <div>
+                            <div class="text-xs text-gray-400">Since</div>
+                            <div class="font-display font-bold text-xl">2020</div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-display font-bold mb-2">Call Us</h3>
-                    <p class="text-gray-400">+1 (555) 123-4567<br>Mon-Fri, 9am-6pm EST</p>
-                </div>
-                
-                <div class="glass-hover rounded-3xl p-8">
-                    <div class="w-14 h-14 rounded-2xl bg-[--primary]/10 flex items-center justify-center mb-4">
-                        <i class="fas fa-envelope text-[--primary] text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold mb-2">Email Us</h3>
-                    <p class="text-gray-400">hello@techtower.com<br>support@techtower.com</p>
-                </div>
-                
-                <div class="glass-hover rounded-3xl p-8">
-                    <div class="w-14 h-14 rounded-2xl bg-[--primary]/10 flex items-center justify-center mb-4">
-                        <i class="fas fa-clock text-[--primary] text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold mb-2">Business Hours</h3>
-                    <p class="text-gray-400">Mon-Fri: 9am-6pm<br>Sat-Sun: 10am-4pm</p>
-                </div>
-                
-                <!-- Map -->
-                <div class="glass rounded-3xl overflow-hidden h-64">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1841846828986!2d-73.98784368459395!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!-- OUR STORY SECTION -->
+<!-- ============================================ -->
+<section class="py-20 px-4 bg-gradient-to-b from-transparent to-black/30">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="glass px-4 py-2 rounded-full text-sm font-display tracking-wider inline-block mb-4">OUR JOURNEY</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold mb-6">
+                From Vision to <span class="text-gradient">Reality</span>
+            </h2>
+        </div>
+        
+        <div class="glass rounded-3xl p-8 sm:p-12 mb-12">
+            <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                Founded with a passion for technology and a commitment to innovation, TechTower Innovations began as a collective of bright minds aiming to solve complex challenges with elegant software solutions.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                Our journey is fueled by a desire to not just meet client expectations, but to exceed them, fostering growth and digital transformation. We've grown from a small startup to a trusted partner for businesses across Africa, delivering solutions that make a real difference.
+            </p>
+        </div>
+        
+        <!-- Timeline -->
+        <div class="space-y-8">
+            <div class="flex items-start space-x-6" x-data="{ inView: false }" x-intersect="inView = true">
+                <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-[--primary]/20 flex items-center justify-center">
+                    <span class="text-2xl font-display font-bold text-[--primary]">1</span>
+                </div>
+                <div class="flex-1 glass rounded-2xl p-6" :class="inView ? 'animate-slide-up' : 'opacity-0'">
+                    <h3 class="text-xl font-display font-bold mb-2">The Beginning</h3>
+                    <p class="text-gray-400">Started in 2020 with a vision to bring world-class software development to East Africa</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start space-x-6" x-data="{ inView: false }" x-intersect="inView = true">
+                <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-[--primary]/20 flex items-center justify-center">
+                    <span class="text-2xl font-display font-bold text-[--primary]">2</span>
+                </div>
+                <div class="flex-1 glass rounded-2xl p-6" :class="inView ? 'animate-slide-up' : 'opacity-0'">
+                    <h3 class="text-xl font-display font-bold mb-2">Growth & Expansion</h3>
+                    <p class="text-gray-400">Expanded our team and services, delivering 500+ successful projects across multiple industries</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start space-x-6" x-data="{ inView: false }" x-intersect="inView = true">
+                <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-[--primary]/20 flex items-center justify-center">
+                    <span class="text-2xl font-display font-bold text-[--primary]">3</span>
+                </div>
+                <div class="flex-1 glass rounded-2xl p-6" :class="inView ? 'animate-slide-up' : 'opacity-0'">
+                    <h3 class="text-xl font-display font-bold mb-2">Leading Innovation</h3>
+                    <p class="text-gray-400">Recognized as a leading tech partner, driving digital transformation across Africa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- MISSION, VISION, APPROACH SECTION -->
+<!-- ============================================ -->
+<section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Mission -->
+            <div class="glass-hover rounded-3xl p-8 text-center card-product">
+                <div class="w-16 h-16 rounded-2xl bg-[--primary]/20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-rocket text-[--primary] text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">Our Mission</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    To empower businesses with transformative technology, fostering innovation and sustainable growth across Africa and beyond.
+                </p>
+            </div>
+            
+            <!-- Vision -->
+            <div class="glass-hover rounded-3xl p-8 text-center card-product">
+                <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-eye text-blue-400 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">Our Vision</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    To be the leading digital innovation partner, recognized for excellence, impact, and shaping the future of technology.
+                </p>
+            </div>
+            
+            <!-- Approach -->
+            <div class="glass-hover rounded-3xl p-8 text-center card-product">
+                <div class="w-16 h-16 rounded-2xl bg-green-500/20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-cogs text-green-400 text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-display font-bold mb-4">Our Approach</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We combine agile methodologies, user-centric design, and deep technical expertise to deliver solutions that are not just built right, but are the right build.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- OUR GUIDING PRINCIPLES/VALUES SECTION -->
+<!-- ============================================ -->
+<section id="values" class="py-20 px-4 bg-gradient-to-b from-transparent to-black/30">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="glass px-4 py-2 rounded-full text-sm font-display tracking-wider inline-block mb-4">WHAT DRIVES US</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold mb-6">
+                Our Guiding <span class="text-gradient">Principles</span>
+            </h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                These values are the bedrock of our company culture and the driving force behind our success.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Innovation First -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'">
+                <div class="w-14 h-14 rounded-2xl bg-[--primary]/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-lightbulb text-[--primary] text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Innovation First</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We constantly explore new technologies and creative approaches to deliver cutting-edge solutions that push boundaries and set new standards.
+                </p>
+            </div>
+            
+            <!-- Client Success -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'" style="animation-delay: 0.1s;">
+                <div class="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-handshake text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Client Success</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Your goals are our goals. We are dedicated to building partnerships that drive tangible business value and long-term success.
+                </p>
+            </div>
+            
+            <!-- Unwavering Integrity -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'" style="animation-delay: 0.2s;">
+                <div class="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-alt text-green-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Unwavering Integrity</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We operate with transparency, honesty, and the highest ethical standards in all our interactions and business practices.
+                </p>
+            </div>
+            
+            <!-- Excellence -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'" style="animation-delay: 0.3s;">
+                <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-award text-purple-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Pursuit of Excellence</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We strive for excellence in every line of code, every design element, and every client interaction. Good is never good enough.
+                </p>
+            </div>
+            
+            <!-- Collaboration -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'" style="animation-delay: 0.4s;">
+                <div class="w-14 h-14 rounded-2xl bg-yellow-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-users text-yellow-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Team Collaboration</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    We believe the best solutions come from diverse perspectives working together towards a common goal with mutual respect.
+                </p>
+            </div>
+            
+            <!-- Continuous Learning -->
+            <div class="glass-hover rounded-3xl p-8 card-product" x-data="{ inView: false }" x-intersect="inView = true" :class="inView ? 'animate-slide-up' : 'opacity-0'" style="animation-delay: 0.5s;">
+                <div class="w-14 h-14 rounded-2xl bg-pink-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-graduation-cap text-pink-400 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-display font-bold mb-4">Continuous Learning</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Technology evolves rapidly, and so do we. We invest in our team's growth and stay ahead of industry trends and best practices.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- STATS SECTION -->
+<!-- ============================================ -->
+<section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="glass rounded-3xl p-12">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div x-data="counter(500)" x-init="init()">
+                    <div class="text-5xl font-display font-bold text-gradient mb-2" x-text="count + '+'"></div>
+                    <div class="text-gray-400">Projects Delivered</div>
+                </div>
+                <div x-data="counter(98)" x-init="init()">
+                    <div class="text-5xl font-display font-bold text-gradient mb-2" x-text="count + '%'"></div>
+                    <div class="text-gray-400">Client Satisfaction</div>
+                </div>
+                <div x-data="counter(50)" x-init="init()">
+                    <div class="text-5xl font-display font-bold text-gradient mb-2" x-text="count + '+'"></div>
+                    <div class="text-gray-400">Team Members</div>
+                </div>
+                <div x-data="counter(15)" x-init="init()">
+                    <div class="text-5xl font-display font-bold text-gradient mb-2" x-text="count + '+'"></div>
+                    <div class="text-gray-400">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- PARTNER WITH US CTA SECTION -->
+<!-- ============================================ -->
+<section id="contact" class="py-20 px-4 bg-gradient-to-b from-transparent to-black/30">
+    <div class="max-w-4xl mx-auto">
+        <div class="glass rounded-3xl p-12 text-center relative overflow-hidden">
+            <!-- Decorative gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[--primary]/10 to-transparent pointer-events-none"></div>
+            
+            <div class="relative z-10">
+                <div class="w-20 h-20 rounded-3xl bg-[--primary]/20 flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-rocket text-[--primary] text-4xl"></i>
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold mb-6">
+                    Ready to <span class="text-gradient">Transform</span> Your Business?
+                </h2>
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Let's collaborate to bring your vision to life. Partner with TechTower and experience innovation that drives real results.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact.html" class="btn-primary px-8 py-4 rounded-xl inline-flex items-center justify-center space-x-2">
+                        <span>START A PROJECT</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/services.html" class="btn-glass px-8 py-4 rounded-xl">VIEW OUR SERVICES</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Counter animation function
+    function counter(target) {
+        return {
+            count: 0,
+            target: target,
+            
+            init() {
+                this.animateCounter();
+            },
+            
+            animateCounter() {
+                const duration = 2000;
+                const startTime = Date.now();
+                
+                const animate = () => {
+                    const currentTime = Date.now();
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function
+                    const easeOutQuad = progress * (2 - progress);
+                    
+                    this.count = Math.floor(easeOutQuad * this.target);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+            }
+        }
+    }
+</script>
 
 
 
